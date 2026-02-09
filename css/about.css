@@ -1,0 +1,197 @@
+:root {
+  --font-sans: "DM Sans", -apple-system, BlinkMacSystemFont,
+    "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+
+  /* Colours */
+  --color-bg: #564E79;
+  --color-accent: #F4C8FB;
+  --color-font: #fff;
+  --color-text-secondary: #B096B4;
+  --card: rgba(255,255,255,0.06);
+  --stroke: rgba(255,255,255,0.25);
+  --stroke-strong: rgba(255,255,255,0.35);
+  --muted: rgba(255,255,255,0.72);
+  --muted2: rgba(255,255,255,0.58);
+}
+.wrap{
+    max-width: 1250px;
+    margin: 0 auto;
+    padding: 100px 20px 0;
+}
+.grid{
+    display: grid;
+    grid-template-columns: 1.05fr 1fr;
+    gap: 20px;
+    align-items: start;
+}
+
+.left-col {
+  display: grid;
+  gap: 18px;
+}
+
+/* Card base */
+.card{
+    background: var(--card);
+    border: 1px solid var(--stroke);
+    border-radius: 18px;
+}
+/* Left / About */
+.about{
+    position: relative;
+    padding: 28px 26px 24px;
+}
+
+.avatar{
+    position: absolute;
+      top: -34px;
+      left: 28px;
+      width: 86px;
+      height: 86px;
+      border-radius: 50%;
+      border: 1px solid var(--stroke);           
+      overflow: hidden;
+      background: rgba(255,255,255,0.12);
+    }
+    .avatar img{
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .about h2{
+      margin: 40px 0 10px;
+      color: var(--color-accent);
+    }
+ 
+    .about p{
+      margin: 0 0 14px;
+      color: var(--color-font);
+      font-size: 15px;
+      line-height: 1.55;
+      max-width:70ch;
+    }
+
+    /* Right column stack */
+    .stack{
+      display: grid;
+      gap: 18px;
+    }
+
+    .panel{
+      padding: 18px 18px 16px;
+    }
+
+    .panel h2{
+      margin: 0 0 12px;
+      font-size: 16px;
+      letter-spacing: 0.2px;
+      color: var(--color-accent);
+    }
+
+    .row{
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 14px;
+      padding: 8px 0;
+      border-top: 1px solid rgba(255,255,255,0.10);
+    }
+    .row:first-of-type{ border-top: none; padding-top: 0; }
+
+    .role{
+      font-size: 14px;
+      line-height: 1.35;
+      color: var(--text);
+    }
+    .sub{
+      display: block;
+      margin-top: 4px;
+      font-size: 12px;
+      color: var(--muted2);
+      font-weight: 400;
+    }
+    .date{
+      font-size: 12px;
+      color: var(--muted2);
+      white-space: nowrap;
+      padding-top: 2px;
+    }
+
+  
+
+    /* “Skills” placeholder styling */
+    .chips{
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 10px;
+    }
+    .chip{
+      font-size: 12px;
+      color: var(--muted);
+      border: 1px solid rgba(255,255,255,0.18);
+      padding: 6px 10px;
+      border-radius: 999px;
+      background: rgba(255,255,255,0.04);
+    }
+
+    /* Gallery */
+    .gallery-grid{
+        display: flex;
+        flex-wrap: wrap;
+        gap: 2%;
+    }
+    .gallery-img {
+        width: 100px;
+        height: 100px;
+        object-fit: cover;
+        border-radius: 8px;
+        cursor: pointer;
+        transition: transform 0.2s ease;
+    }
+    .gallery-img:hover {
+        transform: scale(1.02);
+    }
+    /* Modal */
+    .img-modal {
+        display: none;
+        position: fixed;
+        inset: 0;
+        background: rgba(0,0,0,0.7);
+        z-index: 1000;
+        align-items: center;
+        justify-content: center;
+    }
+    .img-modal-content {
+        max-width: 90%;
+        max-height: 85vh;
+        border-radius: 18px;
+    }
+    .img-modal-close {
+        position: absolute;
+        top: 24px;
+        right: 28px;
+        font-size: 32px;
+        color: #fff;
+        cursor: pointer;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+        .about p {
+            font-size: 16px;
+        }
+        .role {
+            font-size: 14px;
+        }
+        .chip {
+            font-size: 14px;
+        }
+    }
+
+    @media (max-width: 900px){
+      .grid{ grid-template-columns: 1fr; }
+      .avatar{ left: 18px; }
+      .about{ min-height: unset; }
+    }

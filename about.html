@@ -1,0 +1,164 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <!-- Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap" rel="stylesheet">
+
+        <!-- Icons -->
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        />
+        <link rel="stylesheet" href="css/main.css" />
+        <link rel="stylesheet" href="css/about.css" />
+        <title>About</title>
+    </head>
+    <body>
+
+        <!-- Header (injected) -->
+        <div id="site-header"></div>
+        <main class="wrap">
+            <section class="grid">
+                <!-- LEFT: About -->
+                <div class="left-col">
+                    <article class="card about">
+                        <div class="avatar">
+                            <img src="assets/img/me.jpg" alt="Portrait" />
+                        </div>
+
+                        <h2>Valeriya, Product Designer (she/her)</h2>
+                        <p>
+                            I’m currently studying <a class="text-link" href="https://www.sfu.ca/siat.html" target="_blank">Arts and Technology at SFU</a>, remotely completing my final term while based in Toronto.
+                            Previously, I’ve worked as an Interactive Designer at <a class="text-link" href="https://ubccpd.ca/about-us/meet-team" target="_blank">UBC CPD</a> in Vancouver, BC, gaining hands-on experience
+                            in instructional design, UI/UX design, web design/development, and visual art.
+                        </p>
+                        <p>
+                            Throughout my academic and professional journey, I’ve built experience across cognitive psychology, marketing
+                            human–computer interaction, interactive systems, and technical foundations. I integrate these perspectives in my product design practice, 
+                            balancing human cognition, system constraints, and how design decisions translate into real-world outcomes.
+                        </p>
+                        <p class="last-p">
+                            My goal is to create products that are intentional, usable, and meaningfully connected to the people they are designed for.
+                        </p>
+                    </article>
+                    <section class="card panel">
+                        <h2>A little more about me...</h2>
+                        <p class="last-p"><span style="color: #F4C8FB;">⟢</span> As a Korean, born and raised in a small town in the Far East of Russia and moved to Canada 10 years ago,
+                            I hold a unique combination of 3 different cultures which is often expressed in my art/design and the way I do things.
+                            Outside of school and work, I love cooking, traveling, going for long walks, and drawing whenever I have time and inspiration <span style="color: #F4C8FB;">⟢</span></p>
+                    </section>
+                </div>
+                <!-- RIGHT: Panels -->
+                <aside class="stack">
+                    <div class="card panel">
+                        <h2>Experience</h2>
+                        <div class="row">
+                            <div>
+                                <div class="role">Interactive Designer, UBC Continuing Professional Development</div>
+                            </div>
+                            <div class="date">Sep 2024 – Sep 2025</div>
+                        </div>
+                        <div class="row">
+                            <div>
+                                <div class="role">Digital Marketing Account Manager, Guaranteed SEO</div>
+                            </div>
+                            <div class="date">June 2020 – Dec 2023</div>
+                        </div>
+                    </div>
+                    <div class="card panel panel--highlight">
+                        <h2>Education</h2>
+                            <div class="row">
+                                <div>
+                                    <div class="role">Simon Fraser University, BSc, Interactive Arts & Technology</div>
+                                </div>
+                                <div class="date">Sep 2022 – May 2026</div>
+                            </div>
+                            <div class="row">
+                                <div>
+                                    <div class="role">University of British Columbia, BA, Cognitive Systems</div>
+                                </div>
+                                <div class="date">Sep 2015 – Dec 2019</div>
+                            </div>
+                        </div>
+                    <div class="card panel">
+                        <h2>Skills</h2>
+                        <div class="chips">
+                            <span class="chip">UI/UX Design</span>
+                            <span class="chip">Visual Design</span>
+                            <span class="chip">Interaction Design</span>
+                            <span class="chip">Web Development</span>
+                            <span class="chip">User Research</span>
+                            <span class="chip">HCI</span>
+                            <span class="chip">Wireframing</span>
+                            <span class="chip">Prototyping</span>
+                            <span class="chip">Digital Marketing</span>
+                            <span class="chip">Social Media Marketing</span>
+                            <span class="chip">Content Strategy</span>
+
+                        </div>
+                    </div>
+                    <!-- <section class="card panel">
+                        <h2>Tools</h2>
+                        <div class="chips">
+                            <span class="chip">Figma</span>
+                            <span class="chip">Illustrator</span>
+                            <span class="chip">InDesign</span>
+                            <span class="chip">React Native</span>
+                            <span class="chip">VS Code</span>
+                            <span class="chip">Github</span>
+                            <span class="chip">WordPress</span>
+                        </div>
+                    </section> -->
+                    <div class="card panel">
+                        <h2>Gallery</h2>
+                        <div class="gallery-grid">
+                            <img class="gallery-img" src="assets/img/kayak.png">
+                            <img class="gallery-img" src="assets/img/cook.png">
+                            <img class="gallery-img" src="assets/img/khv.jpg">
+                            <img class="gallery-img" src="assets/img/me-eva.png">
+                            <img class="gallery-img" src="assets/img/kohsamui.png">
+
+
+                        </div>
+                        <!-- Image modal -->
+                        <div class="img-modal" id="imgModal">
+                        <span class="img-modal-close">&times;</span>
+                        <img class="img-modal-content" id="imgModalContent">
+                        </div>
+                        
+                    </div>
+                </aside>
+            </section>
+        </main>
+        <!-- Footer (injected) -->
+         <div id="site-footer"></div>
+         <!-- Layout loader -->
+        <script src="js/layout.js"></script>
+        <script>
+  const modal = document.getElementById("imgModal");
+  const modalImg = document.getElementById("imgModalContent");
+  const closeBtn = document.querySelector(".img-modal-close");
+
+  document.querySelectorAll(".gallery-img").forEach(img => {
+    img.addEventListener("click", () => {
+      modal.style.display = "flex";
+      modalImg.src = img.src;
+    });
+  });
+
+  closeBtn.addEventListener("click", () => {
+    modal.style.display = "none";
+  });
+
+  modal.addEventListener("click", (e) => {
+    if (e.target === modal) {
+      modal.style.display = "none";
+    }
+  });
+</script>
+    </body>
+</html>

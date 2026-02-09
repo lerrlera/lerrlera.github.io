@@ -1,0 +1,345 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Seedling App: Product Design</title>
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap" rel="stylesheet">
+
+    <!-- Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="css/project.css" />
+  </head>
+
+  <body>
+    <!-- Header (injected) -->
+    <div id="site-header"></div>
+    <!-- Main content -->
+    <main id="main">
+      <!-- Banner / Hero -->
+      <section id="banner" aria-labelledby="banner-title">
+        <div class="project-banner-container">
+          <h1>
+            Improving youth access to substance use support in rural B.C.
+          </h1>
+          <img class="banner" src="assets/img/seedling-banner.png">
+          <div class="outline-box-full">
+
+          <table class="metadata-table">
+            <tr>
+                <th>Project Type</th>
+                <td>Academic <i>(final project for Advanced Human-Computer Interaction course)</i></td>
+            </tr>
+            <tr>
+                <th>My Role</th>
+                <td>Product Design, Visual Direction, Prototyping, Design System</td>
+            </tr>
+            <tr>
+                <th>Team</th>
+                <td>Jae Eun, Kate, Frentzen</td>
+            </tr>
+            <tr>
+                <th>Timeline</th>
+                <td>Oct–Dec 2025</td>
+            </tr>
+          </table>  
+          </div>    
+        </div>
+      </section>
+      <section id="project-content">
+  <div class="project-layout">
+    <!-- Sidebar nav -->
+    <nav class="project-sidebar" aria-label="On this page">
+      <p class="sidebar-label">Navigation</p>
+      <ul>
+        <li><a href="#banner">Project Info</a></li>
+        <li><a href="#overview">Overview</a></li>
+        <li><a href="#problem">Problem Statement</a></li>
+        <li><a href="#solution">Our Solution</a></li>
+        <li><a href="#userflow">Userflows</a></li>
+        <li><a href="#wireframes">Wireframes</a></li>
+        <li><a href="#direction">Visual Direction & Mi-Fi</a></li>
+        <li><a href="#iteration">Iteration & Design Evolution</a></li>
+        <li><a href="#prototype">Prototyping Stage</a></li>
+        <li><a href="#final">Final Touches & Design System</a></li>
+        <li><a href="#reflection">Reflection</a></li>
+
+       
+      </ul>
+    </nav>
+
+    <!-- Main article content -->
+    <div class="project-body">
+      <section id="overview" class="title-text">
+        <h2>Overview</h2>
+        <p>
+          Seedling is an app designed to support rural youth (13–24 y.o.) in British Columbia (BC)
+          struggling with substance use. The app reduces barriers to accessing social services by
+          enabling outreach to service providers and offering a gamified experience that keeps users
+          engaged while waiting for follow-up.
+        </p>
+
+        <p>
+          The final deliverable is an interactive prototype demonstrating core user flows, including
+          onboarding, service connection, and a location-based game.
+        </p>
+      </section>
+
+      <section id="problem" class="title-text">
+        <h2 class="project-sub">Rural youth in BC often face significant challenges when trying to access substance use support</h2>
+        <p>Unlike urban areas, rural communities frequently lack nearby services, established youth support networks, and discreet pathways to help. This can lead to youth using substances alone and experiencing higher levels of risk.</p>
+        <figure class="project-figure">
+          <img class="project-img" src="assets/img/infographic.png" alt="Research highlighting rural–urban disparities">
+          <figcaption class="project-caption">
+            Research highlighting rural–urban disparities in youth substance use and access to services.
+          </figcaption>
+        </figure>
+      </section>
+
+      <section id="solution" class="title-text">
+        <h2 class="project-sub">Concept development for a youth-focused support application</h2>
+        <p>
+          After receiving positive feedback on our problem space, we moved into ideation to explore potential app concepts. 
+          As a team, we aligned on the importance of directly connecting rural youth struggling with substance use to professional support.
+        </p>
+        <p> 
+          We initially considered several directions, including a storytelling-based app with anonymous professional guidance, 
+          a map-based interface for youth-specific services, and a skill-building app focused on coping strategies and light gamification. 
+          Through this process, we identified a key gap across existing solutions: youth are often expected to initiate contact and then wait without support.
+        </p>
+        <figure class="project-figure">
+          <img class="project-img" src="assets/img/sotryboard.png" alt="Storyboard">
+          <figcaption class="project-caption">
+            Quick scenario with a youth living in rural British Columbia (illustrated by me).
+          </figcaption>
+        </figure>
+
+        <p>This insight led us to define two core objectives for our solution: first, to shift the communication dynamic by enabling 
+          service providers to reach out to youth, and second, to offer meaningful activities that support engagement while youth 
+          wait for human-to-human follow-up.
+        </p>
+        <div class="outline-box">
+          <h3 class="box-title">Seedling App</h3>
+          <p class="p-no-margin">Based on these objectives, we came up with Seedling, an app with two core components:</p>
+          <ul class="list-no-margin">
+            <li class="list-el">Connection to service providers. 
+                Youth can discover local organizations and opt into outreach, 
+                allowing providers to initiate contact and reducing the pressure on users to navigate complex systems alone.</li>
+            <li class="list-el" style="margin-bottom: 0;">Gamification to sustain engagement. A location-based game allows users to collect “seeds,” discover community resources, 
+              and participate in shared virtual gardens while waiting for follow-up supporting emotional engagement.</li>
+          </ul>
+        </div>
+      </section>
+
+      <section id="userflow" class="title-text">
+        <h2 class="project-sub">Creating initial structure - user flows</h2>
+        <p>I was responsible for creating two coordinated user flows for the onboarding questionnaire/service connection and game experience.</p>
+        <p>This ensured the app kept questionnaires and game separately as suggested by our teaching team. 
+          Thus, the users could move through structured onboarding and service connection, 
+          skip directly to play, or engage with the app gradually - without being forced into a single path.</p>
+       
+        <figure class="project-figure">
+          <img class="project-img" src="assets/img/app-flow.png" alt="User flow">
+          <figcaption class="project-caption">
+            Primary user flow for Seedling: new or returning user. Includes path to questionnaire and main app dashboard.
+          </figcaption>
+        </figure>
+        <figure class="project-figure">
+          <img class="project-img" src="assets/img/game-flow.png" alt="User flow">
+          <figcaption class="project-caption">
+            Secondary user flow. Includes general game functionality and features.
+          </figcaption>
+        </figure>
+         <div class="outline-box">
+          <p class="p-no-margin">In other words, our application can be used differently depending on the user’s needs - whether they want to sign up 
+            for a service provider connection, play the game, or do both. We intentionally wanted to design the experience to feel relaxing and low-pressure, 
+            allowing users to engage at their own pace.</p>
+         </div>
+    
+      </section>
+
+      <section id="wireframes" class="title-text">
+        <h2 class="project-sub">Collaborating on wireframes</h2>
+        <p>Wireframing was a collaborative effort across the team. Together, we explored layout, navigation, 
+          and information hierarchy for onboarding, dashboard, resources, emergency access, and the game. These wireframes established 
+          the foundation for later interaction refinement and visual direction.</p>
+       
+        <figure class="project-figure">
+          <img class="project-img" src="assets/img/wireframes.png" alt="Wireframes">
+          <figcaption class="project-caption">
+            Some of the wireframes that our team collaboratively worked on.
+          </figcaption>
+        </figure>
+      </section>
+
+      <section id="direction" class="title-text">
+        <h2 class="project-sub">Visual direction & mid-fidelity design</h2>
+        <p>As we transitioned from wireframes to low- and mid-fidelity designs, I set the visual direction using 
+          calm purple tones to reduce anxiety and support emotional safety and designed our custom Seedling character,
+           reinforcing growth and care.</p>
+        <p>I was particularly responsible for restructuring content and features to improve usability and reduce cognitive load. 
+            Some of key UX improvements I introduced:</p>
+        <ul class="list">
+          <li class="list-el">Drop-downs that to minimize screen density while still allowing users to access all necessary content as needed</li>
+          <li class="list-el">A progress indicator that provides users with clear feedback on their progress</li>
+          <li class="list-el">Buttons to skip questionnaires, allowing users to engage solely with the game or dashboard if preferred</li>
+        </ul> 
+      
+        <figure class="project-figure">
+          <video autoplay loop muted playsinline class="video">
+            <source src="assets/vids/video-quest.mov" type="video/mp4">
+          </video>
+          <figcaption class="project-caption">
+            Mi-fi prototype of the onboarding questionnaire flow.
+          </figcaption>
+        </figure>
+        <figure class="project-figure">
+          <video autoplay loop muted playsinline class="video">
+            <source src="assets/vids/service-ques.mov" type="video/mp4">
+          </video>
+          <figcaption class="project-caption">
+            Mi-fi prototype of the connecting questionnaire (step 7 - choosing an organization as a connected provider that can later contact youth).
+          </figcaption>
+        </figure>
+        <p>I conducted targeted research on the visibility of emergency actions in high-stress interfaces and 
+        recommended separating urgent support from non-urgent resources. As a result, I introduced a persistent 
+        “Help Now” button in the bottom navigation, ensuring immediate access to emergency support without 
+        requiring additional navigation or decision-making. This approach prioritizes user safety and aligns 
+        with best practices for high-risk contexts.</p>
+        <figure class="project-figure">
+          <img class="project-img" src="assets/img/resource-mockups.png" alt="Resource mockups">
+          <figcaption class="project-caption">
+            Mockups displaying Seedling's main dashboard. Specifically, a general resource screen and an urgent "Help Now" screen.
+          </figcaption>
+        </figure>
+      </section>
+
+      <section id="iteration" class="title-text">
+        <h2 class="project-sub">Iteration & design evolution</h2>
+        <p>Initially, the game part of Seedling explored a personal garden where users collected seeds privately. However, 
+          the app did not strongly support Wave 2 (social interaction and collaboration) or Wave 3 HCI 
+          (user experience and value-driven engagement), as the experience remained 
+          isolated rather than communal.</p>
+        <p>According to <a class="text-link" href="https://www.frontiersin.org/journals/psychiatry/articles/10.3389/fpsyt.2022.883817/full">
+          Truong, and Gray (2022)</a>, community gardens foster a feeling of belonging which results in “social cohesion and community building” through cooperation and 
+          trust-building activities. Moreover, studies show that digital tools that allow participants to collaborate to 
+          improve their environment can enhance ‘place-belongingness’ - a sense of belonging associated with geographical places.</p>
+         
+       
+        <figure class="project-figure">
+          <img class="project-img" src="assets/img/before-after.png" alt="Before and after map view">
+          <figcaption class="project-caption">
+            Before and after comparison of a personal garden vs community garden concept in Seedling.
+          </figcaption>
+        </figure>
+        
+        <div class="outline-box">
+          <p class="p-no-margin">Through in-class critique and iteration, we shifted to 
+          a community garden model that emphasizes shared experiences and peer presence. Instead of individual 
+          gardens, users can now grow collected seeds in community gardens created by others.</p>
+        </div>
+      </section>
+
+      <section id="prototype" class="title-text">
+        <h2 class="project-sub">Prototyping stage</h2>
+        <p>I was involved in interactive prototyping process, particularly for the game and customization.</p>
+        <p>For game interactions, I separated seed and garden modes on the map using a custom toggle informed by user feedback.
+           This distinction helps users clearly differentiate between community gardens available for interaction and the 
+           seed-collection screens within the game. I also added subtle shadow motion to seeds to signal collectability and implemented conditional 
+          logic with counters to ensure seed counts update accurately as users interact.</p>
+          <figure class="project-figure">
+            <video autoplay loop muted playsinline class="video">
+              <source src="assets/vids/collecting-seed.mov" type="video/mp4">
+            </video>
+            <figcaption class="project-caption">
+              Hi-fi prototype of the seed collection flow in the game. This also shows how to switch between Seed View and Garden view.
+            </figcaption>
+        </figure>
+       
+        <p>I designed the plant customization flow so that users first personalize the flower’s shape, colour, and pot, 
+          then review their selected design and add a personal message for others to unlock once the seed is collected by 
+          another user and begins growing in any community garden. This is followed by a confirmation screen that shows 
+          the seed’s placement on the map. Users cannot collect or view their own seeds, as planted seeds are intended 
+          exclusively for discovery by others.</p>
+        <div class="outline-box">
+          <p class="p-no-margin">This flow encourages intentional creation and reinforces the social nature of the experience. Separating customization, review 
+            and confirmation helps reduce cognitive load and allows users to feel confident in their choices before sharing them 
+            publicly.</p>
+        </div>
+          
+          <figure class="project-figure">
+            <video autoplay loop muted playsinline class="video">
+              <source src="assets/vids/seed-create.mov" type="video/mp4">
+            </video>
+            <figcaption class="project-caption">
+              Hi-fi prototype of the seed creation and flower customization feature in the game.
+            </figcaption>
+        </figure>
+
+        <p>I also prototyped the end-to-end community garden flow, allowing users to grow their seed, observe the growth 
+          process, and discover other users’ flowers and messages within the shared garden.</p>
+
+        <figure class="project-figure">
+            <video autoplay loop muted playsinline class="video">
+              <source src="assets/vids/growseed-v.mov" type="video/mp4">
+            </video>
+            <figcaption class="project-caption">
+              Hi-fi prototype of the seed growing process.
+            </figcaption>
+        </figure>
+          
+      </section>
+
+      <section id="final" class="title-text">
+        <h2 class="project-sub">Final touches & design system</h2>
+        <p>In the final phase, I collaborated with another teammate Kate 
+          to create reusable design system elements, ensuring consistency across screens, 
+          components, and interactions.</p>
+       
+        <figure class="project-figure">
+          <img class="project-img" src="assets/img/design-system.png" alt="Design system">
+          <figcaption class="project-caption">
+            A quick glipmse of our component system created for Seedling by my teammate Kate and me.
+          </figcaption>
+        </figure>
+        
+      </section>
+        <section id="reflection" class="title-text">
+        <h2 class="project-sub">Reflecton</h2>
+        <p>This project strengthened my ability to design for emotionally sensitive, high-stakes contexts, 
+          balance individual autonomy with community-based experiences, and translate HCI theory into concrete 
+          interaction decisions. It also gave me end-to-end experience designing exclusively for mobile - from 
+          initial concept to final prototype - while developing my ability to allocate work effectively and 
+          leverage team members’ strengths.</p>
+          <p>If I were to redo this project, I would spend more time on visual and interaction consistency 
+            across screens, prioritizing a cohesive design system over adding secondary features that do 
+            not strongly support the core goal (such as watering seeds). I would also work more intentionally 
+            to tie interactions back to substance-use support, ensuring that every feature clearly serves 
+            the project’s primary purpose rather than diluting it.</p>
+      
+        
+      </section>
+    </div>
+  </div>
+</section>
+
+
+    
+    </main>
+
+    <!-- Footer (injected) -->
+    <div id="site-footer"></div>
+
+    <!-- Layout loader -->
+    <script src="js/layout.js"></script>
+  </body>
+</html>
+
