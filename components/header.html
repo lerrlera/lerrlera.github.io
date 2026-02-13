@@ -23,20 +23,9 @@
   </div>
 
   <nav id="mobile-menu" class="mobile-nav" aria-label="Mobile" hidden>
-    <a href="#">projects</a>
-    <a href="about.html">about</a>
-    <a href="#">resume</a>
+    <a href="index.html">Work</a>
+    <a href="about.html">About</a>
+    <a href="playground.html">Playground</a>
+    <a href="/files/CV_ValeriyaTen.pdf" target="_blank">Resume</a>
   </nav>
 </header>
-
-<script>
-  const btn = document.querySelector(".menu-btn");
-  const menu = document.querySelector("#mobile-menu");
-
-  btn.addEventListener("click", () => {
-    const isOpen = btn.getAttribute("aria-expanded") === "true";
-    btn.setAttribute("aria-expanded", String(!isOpen));
-    btn.setAttribute("aria-label", isOpen ? "Open menu" : "Close menu");
-    menu.hidden = isOpen;
-  });
-</script>
