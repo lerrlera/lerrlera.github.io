@@ -13,7 +13,7 @@
 }
 
 html {
-  scroll-behavior: smooth; /* nice smooth scrolling when clicking sidebar links */
+  scroll-behavior: smooth; 
 }
 
 #main {
@@ -312,7 +312,6 @@ html {
         cursor: pointer;
     }
 
-
 /* Queries */
 @media (max-width: 900px) {
 
@@ -320,34 +319,16 @@ html {
     padding: 0 2rem 4rem;
 
   }
-  .project-layout {
-    flex-direction: column;
-    gap: 2rem;
-  }
-
-  .project-sidebar {
-    position: static;
-    flex: none;
-    overflow-x: auto;
-    padding-bottom: 0.5rem;
-  }
-
-  .project-sidebar ul {
-    flex-direction: row;
-    gap: 1.5rem;
-  }
-
-  .project-sidebar a {
-    border-left: none;
-    padding-left: 0;
-    white-space: nowrap;
-  }
 
   .project-body {
     max-width: 100%;
   }
 }
 @media (max-width: 600px) {
+
+  .project-sidebar {
+    display: none;
+  }
 
     .metadata-table th,
     .metadata-table td {

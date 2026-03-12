@@ -312,14 +312,13 @@ p {
     justify-content: center;
   }
   #banner-title {
-    font-size: 30px;
+    font-size: 26px;
   }
   #site-footer .footer-inner {
     flex-direction: column;
     align-items: flex-start;
     gap: 12px;
   }
-
   .footer-right {
     text-align: left;
   }
@@ -340,7 +339,10 @@ p {
         column-count: 2;
     }
     .container {
-      padding: 10% 5%;
+      padding: 30% 0;
+    }
+    .lead {
+      max-width: 100%;
     }
 }
 
